@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='mama'>yo mama</div>
+  <script>
+let playerOption = prompt("Pick an option: rock, paper or scissors"); 
+let playerSelection = playerOption.toLocaleLowerCase()
+  function computerplay() {
+  const options = ["rock", "paper", "scissors"];
+    randomOption = options[Math.floor(Math.random() * options.length)];
+  alert("The computer chose " + randomOption);
+  }
+  const computerSelection = computerplay();
+  function playRound(playerSelection, computerSelection) {
+    if (playerSelection === randomOption) {
+    alert("It's a draw, try again silly.");
+  } else if (randomOption === "rock" && playerSelection === "scissors") {
+    alert("You lost, gonna cry?");
+  } else if (randomOption === "paper" && playerSelection === "rock") {
+    alert("You lost, gonna cry?");
+  } else if (randomOption === "scissors" && playerSelection === "paper") {
+    alert("You lost, gonna cry?");
+  } else if (randomOption === "rock" && playerSelection === "paper") {
+    alert("You won, shocking.");
+  } else if (randomOption === "paper" && playerSelection === "scissors") {
+    alert("You won, shocking.");
+  } else if (randomOption === "scissors" && playerSelection === "rock") {
+    alert("You won, shocking.");
+  } 
+  }
+  console.log(playRound(playerSelection, computerSelection));
+  
+  </script>  
+</body>
+</html>
